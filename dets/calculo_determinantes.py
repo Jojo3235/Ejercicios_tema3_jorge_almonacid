@@ -7,33 +7,33 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def insert(self, val):
+    def insert(lista, val):
         new_node = Node(val)
-        if self.head is None:
-            self.head = new_node
+        if lista.head is None:
+            lista.head = new_node
         else:
-            current_node = self.head
+            current_node = lista.head
             while current_node.next is not None:
                 current_node = current_node.next
             current_node.next = new_node
 
-    def get(self, index):
-        current_node = self.head
+    def get(lista, index):
+        current_node = lista.head
         for i in range(index):
             current_node = current_node.next
         return current_node.val
 
-    def set(self, index, val):
-        current_node = self.head
+    def set(lista, index, val):
+        current_node = lista.head
         for i in range(index):
             current_node = current_node.next
         current_node.val = val
 
-    def remove(self, index):
+    def remove(lista, index):
         if index == 0:
-            self.head = self.head.next
+            lista.head = lista.head.next
         else:
-            current_node = self.head
+            current_node = lista.head
             for i in range(index - 1):
                 current_node = current_node.next
             current_node.next = current_node.next.next
@@ -57,17 +57,17 @@ class Matrix:
                 row.insert(None)
             self.matrix.append(row)
 
-    def set_value(self, i, j, value):
-        self.matrix[i].set(j, value)
+    def set_value(matriz, i, j, value):
+        matriz.matrix[i].set(j, value)
 
-    def get_value(self, i, j):
-        return self.matrix[i].get(j)
+    def get_value(matriz, i, j):
+        return matriz.matrix[i].get(j)
 
-    def print_matrix(self):
-        for i in range(self.m):
+    def print_matrix(matriz):
+        for i in range(matriz.m):
             row = ''
-            for j in range(self.n):
-                row += str(self.get_value(i, j)) + ' '
+            for j in range(matriz.n):
+                row += str(matriz.get_value(i, j)) + ' '
             print(row)
 
     def sarrus(matriz):
