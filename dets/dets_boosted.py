@@ -117,7 +117,7 @@ def pedir_numero():
             print("El número debe ser un número entero")
 
 def main():
-    n = pedir_tamaño_mat()
+    n = 3 #pedir_tamaño_mat()
     matrix = Matrix(n, n)
     for i in range(n):
         for j in range(n):
