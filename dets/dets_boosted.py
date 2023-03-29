@@ -61,8 +61,8 @@ class Matrix:
     def set_value(matrix, i, j, value):
         matrix.matrix[i].set(j, value)
 
-    def get_value(self, i, j):
-        return self.matrix[i].get(j)
+    def get_value(matrix, i, j):
+        return matrix.matrix[i].get(j)
 
     def print_matrix(matrix):
         for i in range(matrix.m):
