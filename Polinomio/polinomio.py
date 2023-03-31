@@ -99,3 +99,16 @@ class Polinomio(object):
             return True
         else:
             return False
+        
+#instanciar polinomio
+p1 = Polinomio()
+
+#agregar terminos
+
+Polinomio.agregar_termino(p1, 2, 3)
+Polinomio.agregar_termino(p1, 1, 2)
+Polinomio.agregar_termino(p1, 0, 1)
+
+#mostrar polinomio
+
+print(Polinomio.mostrar(p1))
